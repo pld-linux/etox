@@ -1,4 +1,5 @@
 Summary:	Enlightened Text Object Library
+Summary(pl):	O¶wiecona biblioteka obiektów tekstowych (Enlightened Text Object Library)
 Name:		etox
 Version:	0.9.0
 %define _snap	20050106
@@ -29,21 +30,39 @@ clipping, aligning and coloring fonts in different styles.
 Among other things, Etox provides a text layout engine that can
 dynamically arrange text flow around other graphical obstacles.
 
+%description -l pl
+Etox to biblioteka sk³adania i rozmieszczania tekstu oparta na Evas.
+Etox pomaga przy wy¶wietlaniu, przemieszczaniu, zmianie rozmiaru,
+nawarstwianiu, przycinaniu, wyrównywaniu i kolorowaniu fontów w
+ró¿nych stylach.
+
+W¶ród innych rzeczy Etex dostarcza silnik do rozmieszczania tekstu
+bêd±cy w stanie dynamicznie uk³adaæ tekst naoko³o innych przeszkód
+graficznych.
+
 %package devel
-Summary:	Etox headers and development libraries
+Summary:	Etox header file
+Summary(pl):	Plik nag³ówkowy Etox
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
-Etox development headers and libraries.
+Etox development header.
+
+%description devel -l pl
+Plik nag³ówkowy Etox.
 
 %package static
-Summary:	Static libraries
+Summary:	Static Etox library
+Summary(pl):	Statyczna biblioteka Etox
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
-Static libraries.
+Static Etox library.
+
+%description static -l pl
+Statyczna biblioteka Etox.
 
 %prep
 %setup -q -n %{name}
@@ -59,6 +78,7 @@ Static libraries.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
@@ -71,18 +91,18 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS COPYING* README*
-%attr(755,root,root) %{_libdir}/libetox.so.*
 %attr(755,root,root) %{_bindir}/etox_test
 %attr(755,root,root) %{_bindir}/etox_selections
+%attr(755,root,root) %{_libdir}/libetox.so.*.*.*
 %{_datadir}/%{name}
 
 %files devel
 %defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/etox-config
 %attr(755,root,root) %{_libdir}/libetox.so
 %{_libdir}/libetox.la
-%{_pkgconfigdir}/etox.pc
 %{_includedir}/Etox.h
-%attr(755,root,root) %{_bindir}/etox-config
+%{_pkgconfigdir}/etox.pc
 %{_aclocaldir}/etox.m4
 
 %files static
