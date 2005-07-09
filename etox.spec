@@ -2,24 +2,19 @@ Summary:	Enlightened Text Object Library
 Summary(pl):	O¶wiecona biblioteka obiektów tekstowych (Enlightened Text Object Library)
 Name:		etox
 Version:	0.9.0
-%define _snap	20050106
+%define _snap	20050701
 Release:	0.%{_snap}.0.1
 License:	BSD
 Group:		X11/Libraries
 #Source0:	http://dl.sourceforge.net/enlightenment/%{name}-%{version}.tar.gz
-Source0:	ftp://ftp.sparky.homelinux.org/pub/e17/%{name}-%{version}-%{_snap}.tar.gz
-# Source0-md5:	3af0f5ba3e9d55a3f30437f6ffa17c7e
+Source0:	ftp://ftp.sparky.homelinux.org/snaps/enli/e17/libs/%{name}-%{_snap}.tar.gz
+# Source0-md5:	6f0241bb8021744f8e081e3739441644
 URL:		http://enlightenment.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	DirectFB-static
-BuildRequires:	ecore-static
-BuildRequires:	edb-static
-BuildRequires:	eet-static
-BuildRequires:	evas-static
-BuildRequires:	freetype-static
-BuildRequires:	libjpeg-static
+BuildRequires:	ecore-devel
 BuildRequires:	libtool
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -90,7 +85,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS COPYING* README*
+%doc AUTHORS COPYING README
 %attr(755,root,root) %{_bindir}/etox_test
 %attr(755,root,root) %{_bindir}/etox_selections
 %attr(755,root,root) %{_libdir}/libetox.so.*.*.*
