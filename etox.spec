@@ -1,20 +1,17 @@
 Summary:	Enlightened Text Object Library
 Summary(pl):	O¶wiecona biblioteka obiektów tekstowych (Enlightened Text Object Library)
 Name:		etox
-Version:	0.9.0
-%define _snap	20050701
-Release:	0.%{_snap}.0.1
+Version:	0.9.0.004
+Release:	1
 License:	BSD
 Group:		X11/Libraries
-#Source0:	http://dl.sourceforge.net/enlightenment/%{name}-%{version}.tar.gz
-Source0:	http://sparky.homelinux.org/snaps/enli/e17/libs/%{name}-%{_snap}.tar.gz
-# Source0-md5:	6f0241bb8021744f8e081e3739441644
+Source0:	http://enlightenment.freedesktop.org/files/%{name}-%{version}.tar.gz
+# Source0-md5:	ffb6de465dfc9a9b2802b414dd432932
 URL:		http://enlightenment.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	ecore-devel
 BuildRequires:	libtool
-BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -60,7 +57,7 @@ Static Etox library.
 Statyczna biblioteka Etox.
 
 %prep
-%setup -q -n %{name}
+%setup -q
 
 %build
 %{__libtoolize}
