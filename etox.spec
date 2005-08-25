@@ -7,7 +7,7 @@ License:	BSD
 Group:		X11/Libraries
 Source0:	http://enlightenment.freedesktop.org/files/%{name}-%{version}.tar.gz
 # Source0-md5:	ffb6de465dfc9a9b2802b414dd432932
-URL:		http://enlightenment.org/
+URL:		http://enlightenment.org/Libraries/Etox/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	ecore-devel
