@@ -12,6 +12,8 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	ecore-devel
 BuildRequires:	libtool
+BuildRequires:	pkgconfig
+Requires:	%{name}-libs = %{version}-%{release}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -32,11 +34,22 @@ W¶ród innych rzeczy Etex dostarcza silnik do rozmieszczania tekstu
 bêd±cy w stanie dynamicznie uk³adaæ tekst naoko³o innych przeszkód
 graficznych.
 
+%package libs
+Summary:	Etox library
+Summary(pl):	Biblioteka Etox
+Group:		X11/Libraries
+
+%description libs
+Etox library.
+
+%description libs -l pl
+Biblioteka Etox.
+
 %package devel
 Summary:	Etox header file
 Summary(pl):	Plik nag³ówkowy Etox
 Group:		Development/Libraries
-Requires:	%{name} = %{version}-%{release}
+Requires:	%{name}-libs = %{version}-%{release}
 
 %description devel
 Etox development header.
@@ -85,8 +98,11 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS COPYING README
 %attr(755,root,root) %{_bindir}/etox_test
 %attr(755,root,root) %{_bindir}/etox_selections
-%attr(755,root,root) %{_libdir}/libetox.so.*.*.*
 %{_datadir}/%{name}
+
+%files libs
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/libetox.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
