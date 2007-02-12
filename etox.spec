@@ -3,7 +3,7 @@
 %bcond_without	static_libs	# don't build static library
 #
 Summary:	Enlightened Text Object Library
-Summary(pl):	O¶wiecona biblioteka obiektów tekstowych (Enlightened Text Object Library)
+Summary(pl.UTF-8):   OÅ›wiecona biblioteka obiektÃ³w tekstowych (Enlightened Text Object Library)
 Name:		etox
 Version:	0.9.0.004
 Release:	1
@@ -28,49 +28,49 @@ clipping, aligning and coloring fonts in different styles.
 Among other things, Etox provides a text layout engine that can
 dynamically arrange text flow around other graphical obstacles.
 
-%description -l pl
-Etox to biblioteka sk³adania i rozmieszczania tekstu oparta na Evas.
-Etox pomaga przy wy¶wietlaniu, przemieszczaniu, zmianie rozmiaru,
-nawarstwianiu, przycinaniu, wyrównywaniu i kolorowaniu fontów w
-ró¿nych stylach.
+%description -l pl.UTF-8
+Etox to biblioteka skÅ‚adania i rozmieszczania tekstu oparta na Evas.
+Etox pomaga przy wyÅ›wietlaniu, przemieszczaniu, zmianie rozmiaru,
+nawarstwianiu, przycinaniu, wyrÃ³wnywaniu i kolorowaniu fontÃ³w w
+rÃ³Å¼nych stylach.
 
-W¶ród innych rzeczy Etex dostarcza silnik do rozmieszczania tekstu
-bêd±cy w stanie dynamicznie uk³adaæ tekst naoko³o innych przeszkód
+WÅ›rÃ³d innych rzeczy Etex dostarcza silnik do rozmieszczania tekstu
+bÄ™dÄ…cy w stanie dynamicznie ukÅ‚adaÄ‡ tekst naokoÅ‚o innych przeszkÃ³d
 graficznych.
 
 %package libs
 Summary:	Etox library
-Summary(pl):	Biblioteka Etox
+Summary(pl.UTF-8):   Biblioteka Etox
 Group:		X11/Libraries
 
 %description libs
 Etox library.
 
-%description libs -l pl
+%description libs -l pl.UTF-8
 Biblioteka Etox.
 
 %package devel
 Summary:	Etox header file
-Summary(pl):	Plik nag³ówkowy Etox
+Summary(pl.UTF-8):   Plik nagÅ‚Ã³wkowy Etox
 Group:		Development/Libraries
 Requires:	%{name}-libs = %{version}-%{release}
 
 %description devel
 Etox development header.
 
-%description devel -l pl
-Plik nag³ówkowy Etox.
+%description devel -l pl.UTF-8
+Plik nagÅ‚Ã³wkowy Etox.
 
 %package static
 Summary:	Static Etox library
-Summary(pl):	Statyczna biblioteka Etox
+Summary(pl.UTF-8):   Statyczna biblioteka Etox
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static Etox library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka Etox.
 
 %prep
