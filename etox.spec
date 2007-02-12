@@ -3,7 +3,7 @@
 %bcond_without	static_libs	# don't build static library
 #
 Summary:	Enlightened Text Object Library
-Summary(pl.UTF-8):   Oświecona biblioteka obiektów tekstowych (Enlightened Text Object Library)
+Summary(pl.UTF-8):	Oświecona biblioteka obiektów tekstowych (Enlightened Text Object Library)
 Name:		etox
 Version:	0.9.0.004
 Release:	1
@@ -40,7 +40,7 @@ graficznych.
 
 %package libs
 Summary:	Etox library
-Summary(pl.UTF-8):   Biblioteka Etox
+Summary(pl.UTF-8):	Biblioteka Etox
 Group:		X11/Libraries
 
 %description libs
@@ -51,7 +51,7 @@ Biblioteka Etox.
 
 %package devel
 Summary:	Etox header file
-Summary(pl.UTF-8):   Plik nagłówkowy Etox
+Summary(pl.UTF-8):	Plik nagłówkowy Etox
 Group:		Development/Libraries
 Requires:	%{name}-libs = %{version}-%{release}
 
@@ -63,7 +63,7 @@ Plik nagłówkowy Etox.
 
 %package static
 Summary:	Static Etox library
-Summary(pl.UTF-8):   Statyczna biblioteka Etox
+Summary(pl.UTF-8):	Statyczna biblioteka Etox
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
